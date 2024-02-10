@@ -1,0 +1,47 @@
+<mat-sidenav-container class="sidenav-container" >
+  <mat-sidenav style="background-color: rgb(192, 192, 192);"
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+    [ngClass]="{ hidden: !(isHandset$ | async) }"
+  >
+    <mat-toolbar style=color:aliceblue >Navigation</mat-toolbar>
+    <mat-nav-list style="color: white;">
+      <a  mat-list-item routerLink="/">Home</a>
+      <a  mat-list-item routerLink="/menu">Menu</a>
+      <a  mat-list-item  routerLink="/reservation">Reservation</a>
+      <a  mat-list-item routerLink="/order">Order</a>
+      <a  mat-list-item routerLink="/auth">Auth</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon class="menu" aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a routerLink="/" class="nav-brand" style="font-size: 20px;">Your
+        Pizza
+      </a>
+      <span class="spacer"></span>
+      <div style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="list" *ngIf="!(isHandset$ | async)">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >Home</a>
+        <a routerLink="/menu" routerLinkActive="active" >Menu</a>
+        <a  routerLink="/reservation" routerLinkActive="active" >Reservation</a>
+        <a routerLink="/order" routerLinkActive="active" >Order</a>
+        <a routerLink="/auth" routerLinkActive="active" >Auth</a>
+      </div>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

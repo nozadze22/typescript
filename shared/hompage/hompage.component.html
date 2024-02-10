@@ -1,0 +1,156 @@
+<main class="home">
+  <section class="banner">
+    <img [src]="imageUrl" alt="" />
+
+    <div class="banner-text">
+      <h5 class="flex-center">This</h5>
+      <h1 class="flex-center">Your pizza</h1>
+
+      <a routerLink="/order">
+        <h6 class="flex-center">order pizza</h6>
+      </a>
+    </div>
+  </section>
+
+  <section class="aboutus">
+    <div class="line"></div>
+    <h2 class="flex-center">About US</h2>
+
+    <h1 class="flex-center">PIZZA MASTERS</h1>
+
+    <div class="master">
+      <img [src]="imageUrl1" alt="" />
+
+      <h5>
+        Our Story THE PASSION FOR PIZZA I'm a paragraph. Click here to add your
+        own text and edit me. It's easy. Just click “Edit Text” or double click
+        me to add your own content and make changes to the font. Feel free to
+        drag and drop me anywhere you like on your page. I'm a great place for
+        you to tell a story and let your users know a little more about you.
+      </h5>
+    </div>
+  </section>
+
+  <section class="kubs">
+    <img [src]="imageUrl2" alt="" />
+  </section>
+
+  <section class="reservation">
+    <div class="line"></div>
+    <h2 class="flex-center">About US</h2>
+
+    <h1 class="flex-center">MAKE RESERVATION</h1>
+
+    <div class="res">
+      <div class="select">
+        <mat-form-field style="width: 250px; margin-top: 18px; padding: 0px 10px;">
+          <mat-label>party size</mat-label>
+          <mat-select id="guest">
+            <mat-option value="one">1 guests</mat-option>
+            <mat-option value="two">2 guests</mat-option>
+            <mat-option value="two">3 guests</mat-option>
+            <mat-option value="two">4 guests</mat-option>
+            <mat-option value="two">5 guests</mat-option>
+            <mat-option value="two">6 guests</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="date">
+        <label for="">Date</label>
+        <input type="date" placeholder="date" />
+      </div>
+      <div class="date">
+        <label for="">time</label>
+        <input type="time" id="time" />
+      </div>
+    </div>
+    <div class="table">
+      <a routerLink="/menu">
+        <h3 (click)="finde()" class="felx-center">Finde Table</h3>
+      </a>
+    </div>
+
+    <div class="forpics">
+      <div>
+        <img [src]="imageUrl3" alt="" />
+      </div>
+      <div>
+        <img [src]="imageUrl4" alt="" />
+      </div>
+      <div>
+        <img [src]="imageUrl5" alt="" />
+      </div>
+      <div>
+        <img [src]="imageUrl6" alt="" />
+      </div>
+      <div>
+        <img [src]="imageUrl7" alt="" />
+      </div>
+      <div>
+        <img [src]="imageUrl8" alt="" />
+      </div>
+      <div>
+        <img [src]="imageUrl9" alt="" />
+      </div>
+      <div>
+        <img [src]="imageUrl10" alt="" />
+      </div>
+      <div>
+        <img [src]="imageUrl11" alt="" />
+      </div>
+      <div>
+        <img [src]="imageUrl12" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="private">
+    <div class="line"></div>
+    <h2 class="flex-center">Private Events</h2>
+
+    <h1 class="flex-center">FANCY A PIZZA PARTY?</h1>
+    <div class="othertext">
+      <h5>
+        I'm a paragraph. Click here to add your own text and edit me. It's easy.
+        Just click “Edit Text” or double click me to add your own content and
+        make changes to the font. Feel free to drag and drop me anywhere you
+        like on your page. I'm a great place for you to tell a story and let
+        your users know a little more about you.
+      </h5>
+
+      <a routerLink="/contact">
+        <h3 class="felx-center">contact us</h3>
+      </a>
+    </div>
+  </section>
+
+  <section class="contacts" id="contact">
+    <h2 class="flex-center">COME GRAB A SLICE!</h2>
+
+    <div class="map">
+      <aside class="left">
+        <h5>
+          500 Terry Francine St. <br />
+          San Francisco, CA 94158
+        </h5>
+
+        <h5>
+          Tel: 123-456-7890 <br />
+          Email: info@mysite.com
+        </h5>
+      </aside>
+
+      <aside class="right">
+        <h5>
+          Monday - Friday 07:00AM - 10:00PM <br />
+          Saturday 09:00AM - 10:00PM <br />
+          Sunday 08:00PM -11:00PM
+        </h5>
+      </aside>
+    </div>
+  </section>
+
+  <app-footer></app-footer>
+
+  <router-outlet></router-outlet>
+</main>

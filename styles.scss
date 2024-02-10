@@ -1,0 +1,33 @@
+$nav-font: 'Montserrat', sans-serif;
+html, 
+body {
+    scroll-behavior: smooth;
+    scroll-padding: 10rem;
+    -ms-scroll-translation: 6s ;
+    
+     margin: 0px;
+     padding: 0px;
+     font-family: $nav-font;
+ }
+
+
+
+section.main-wraper {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    place-items: center;
+}
+
+
+.nav-brand {
+   font-size: 15px;
+    }
+
+
+    .felx-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }

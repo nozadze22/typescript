@@ -1,0 +1,183 @@
+$lobster-font: "Lobster", sans-serif;
+$monserat: "Montserrat", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+.order {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  font-size: $monserat;
+  box-sizing: border-box;
+  .banner {
+    position: relative;
+    padding-top: 64px;
+
+    img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    .ordertext {
+      height: 390px;
+      background-color: rgb(254, 254, 254);
+      position: absolute;
+      top: 40%;
+      left: 20%;
+      display: grid;
+      grid-template-columns: 1fr;
+      right: 20%;
+
+      h1 {
+        font-size: 40px;
+        margin: auto;
+        font-family: "fantasy", "san-serif";
+        font-weight: 800 bold;
+      }
+
+      h4 {
+        margin: auto;
+        font-size: 16px;
+        font-family: $monserat;
+        padding-bottom: 30px;
+      }
+    }
+
+    .sec {
+      position: absolute;
+      top: 100%;
+      left: 40%;
+      border-bottom: 1px rgb(62, 37, 37) solid;
+
+      &:hover {
+        border: none;
+        transition: 1s linear;
+        cursor: pointer;
+      }
+    }
+    .sed {
+      position: absolute;
+      top: 100%;
+      left: 30%;
+      border-bottom: 1px rgb(62, 37, 37) solid;
+      cursor: pointer;
+
+      &:hover {
+        border: none;
+        transition: 1s linear;
+      }
+    }
+  }
+  .forbook {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding-top: 70px;
+    box-sizing: border-box;
+
+    h3 {
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 30px;
+      font-weight: bolder;
+    }
+    h4 {
+      font-size: 20px;
+      font-family: $roboto;
+      font-weight: bold;
+      padding-top: 30px;
+    
+    }
+
+    .cards {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      box-sizing: border-box;
+      row-gap: 10px;
+      column-gap: 10px;
+
+      .card {
+        width: 100%;
+        border: 1px solid black;
+        box-sizing: border-box;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.45);
+          transition: 1s ease;
+          cursor: pointer;
+        }
+
+        h3 {
+          width: 100%;
+          font-size: 13px;
+          text-align: center;
+          padding-left: 10px;
+        }
+        p {
+          width: 100%;
+          font-size: 10px;
+          text-align: center;
+          font-size: 10px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .pizzas {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding-top: 50px;
+    box-sizing: border-box;
+
+    h3 {
+      width: 100%;
+  box-sizing: border-box;
+      font-size: 25px;
+      font-weight: bolder;
+      
+    }
+    h4 {
+      font-size: 13px;
+      font-family: $roboto;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .cards {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 10px;
+      column-gap: 10px;
+      padding-bottom: 70px;
+      box-sizing: border-box;
+
+      .card {
+        width: 100%;
+        border: 1px solid black;
+        box-sizing: border-box;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.45);
+          transition: 1s ease;
+          cursor: pointer;
+        }
+
+        h3 {
+          width: 100%;
+          font-size: 13px;
+          text-align: center;
+          padding-left: 10px;
+        }
+        p {
+          width: 100%;
+          font-size: 10px;
+          text-align: center;
+          font-size: 10px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

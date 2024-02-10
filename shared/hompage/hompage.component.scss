@@ -1,0 +1,381 @@
+$lobster-font: "Lobster", sans-serif;
+$monserat: "Montserrat", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+.home {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: $monserat;
+
+  .banner {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      box-sizing: border-box;
+      background-attachment: fixed;
+    }
+    .banner-text {
+      width: 100%;
+
+      position: absolute;
+      padding-top: 200px;
+      h5 {
+        width: 100%;
+        height: auto;
+        color: white;
+        font-family: $lobster-font;
+        font-size: 65px;
+      }
+      h1 {
+        width: 100%;
+        color: white;
+        font-size: 140px;
+        font-weight: bold;
+        padding-top: 40px;
+        letter-spacing: 5px;
+      }
+
+      a {
+        height: 100px;
+        text-decoration: none;
+
+        h6 {
+          width: 100%;
+          max-width: 150px;
+          height: 40px;
+          color: white;
+          font-size: 16px;
+          border: 1px solid rgb(240, 230, 230);
+          margin: auto;
+          font-family: $lobster-font;
+          margin-top: 200px;
+        }
+        h6:hover {
+          background-color: black;
+          border-color: black;
+          transition: 1s linear;
+        }
+      }
+    }
+  }
+
+  .aboutus {
+    width: 100%;
+    height: 700px;
+
+    .line {
+      display: block;
+      width: 100%;
+      height: 7px;
+      background-color: black;
+      top: 0;
+    }
+
+    h2 {
+      width: 100%;
+      max-width: 300px;
+      height: 50px;
+      background-color: black;
+      color: white;
+      margin: auto;
+    }
+    h1 {
+      color: black;
+      font-size: 50px;
+      padding-top: 40px;
+      font-weight: 800;
+      font-family: $roboto;
+    }
+
+    .master {
+      width: 100%;
+      height: 100%;
+      max-width: 539px;
+      margin: auto;
+
+
+      img {
+        width: 100%;
+      }
+
+      h5 {
+        width: 100%;
+        text-align: center;
+        line-break: anywhere;
+        font-size: 13px;
+        padding-top: 30px;
+        line-height: 25px;
+        font-weight: 300;
+        color: grey;
+      }
+    }
+  }
+
+  .kubs {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    img {
+      width: 100%;
+      height: 605px;
+      object-fit: cover;
+    }
+  }
+
+  .reservation {
+    width: 100%;
+    height: 100%;
+    margin-top: -5px;
+    .line {
+      display: block;
+      width: 100%;
+      height: 7px;
+      background-color: black;
+      top: 0;
+    }
+
+    h2 {
+      width: 100%;
+      max-width: 300px;
+      height: 50px;
+      background-color: black;
+      color: white;
+      margin: auto;
+    }
+    h1 {
+      color: black;
+      font-size: 50px;
+      padding-top: 40px;
+      font-weight: 800;
+      font-family: $roboto;
+    }
+    .res {
+      width: 100%;
+      height: 100%;
+      padding: 0px 100px 0px 100px;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding-top: 20px;
+    
+      .date {
+        width: 100%;
+        max-width: 250px;
+        background-color: rgb(146, 146, 146);
+        padding: 0px 10px;
+        box-sizing: border-box;
+        height: 100%;
+
+        input {
+          width: 100%;
+          
+        flex: auto;
+          height: 50px;
+          border: none;
+          outline: none;
+         
+
+
+          &:hover {
+            transition: 1s linear;
+            border-bottom: 2px solid blue;
+        
+          }
+        }
+        
+        label {
+          display: block;
+          font-size: 15px;
+          color: whitesmoke;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+      }
+    }
+
+   
+    .table {
+      padding-top: 20px;
+      width: 100%;
+      height: 100%;
+
+
+      a {
+        width: 100%;
+        background-color: black !important;
+        text-decoration: none;
+
+        h3 {
+          width: 150px;
+          margin: auto;
+          color: black;
+          font-size: 25px;
+          font-family: $lobster-font;
+
+          &:hover {
+            color: blue;
+            transition: 2s ease;
+          }
+        }
+      }
+    }
+    .forpics {
+      max-width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(5, 2fr);
+      box-sizing: border;
+      position: relative;
+     padding-top: 30px;
+      div {
+        max-width: 100%;
+
+        img {
+          width: 100%;
+          max-height: 200px;
+          object-fit: cover;
+          object-position: center;
+          position: relative;
+
+        
+          }
+          
+        
+      }
+    }
+  }
+  .private {
+    width: 100%;
+    height: 100%;
+
+    padding-top: 100px;
+
+    .line {
+      display: block;
+      width: 100%;
+      height: 7px;
+      background-color: black;
+      top: 0;
+    }
+
+    h2 {
+      width: 100%;
+      max-width: 300px;
+      height: 50px;
+      background-color: black;
+      color: white;
+      margin: auto;
+    }
+    h1 {
+      color: black;
+      font-size: 50px;
+      padding-top: 40px;
+      font-weight: 800;
+      font-family: $roboto;
+    }
+    .othertext {
+      width: 100%;
+
+      max-width: 539px;
+      margin: auto;
+
+      h5 {
+        width: 100%;
+        text-align: center;
+        line-break: anywhere;
+        font-size: 13px;
+        padding-top: 30px;
+        line-height: 25px;
+        font-weight: 300;
+        color: rgb(35, 33, 33);
+      }
+      a {
+        width: 100%;
+        max-width: 100px;
+        height: 30px;
+        text-decoration: none;
+        padding-top: 10px;
+
+        h3 {
+          width: 100px;
+          height: 30px;
+          font-size: 15px;
+          color: black;
+          margin: auto;
+          border: 1px solid black;
+
+          &:hover {
+            background-color: black;
+            color: white;
+            transition: 2s linear;
+          }
+        }
+      }
+    }
+  }
+  .contacts {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    margin-top: 50px;
+
+    h2 {
+      width: 100%;
+      font-size: 30px;
+      margin: auto;
+      font-weight: bolder;
+      padding-top: 40px;
+      font-family: $roboto;
+      color: antiquewhite;
+    }
+    .map {
+      width: 100%;
+      height: 200px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .left {
+        padding: 50px 100px 0px 0px;
+
+        h5 {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          font-size: 15px;
+          box-sizing: border-box;
+          color: grey;
+        }
+      }
+
+      .right {
+        padding: 50px 0px 0px 50px;
+
+        h5 {
+          padding-left: 30px;
+          width: 100%;
+          font-size: 15px;
+          color: grey;
+          box-sizing: border-box;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+}

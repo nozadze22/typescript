@@ -1,0 +1,216 @@
+<main>
+  <section class="main-wraper flex-center">
+    <section class="auth">
+      <mat-tab-group
+        dynamicHeight
+        [selectedIndex]="tabIndex"
+        (selectedTabChange)="reset($event.index)"
+      >
+        <mat-tab [label]="labels.signIn">
+          <form #signInForm="ngForm" [formGroup]="logInform">
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input
+                type="email"
+                matInput
+                placeholder="Enter Email"
+                formControlName="Email"
+                required
+              />
+              <mat-error> please enter valid email </mat-error>
+              <mat-error
+                *ngIf="getLoginFormValue('email', 'required')"
+              ></mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input
+                type="password"
+                matInput
+                placeholder="Enter password"
+                formControlName="password"
+                required
+              />
+              <mat-error> please enter valid email </mat-error>
+              <mat-error
+                *ngIf="getLoginFormValue('password', 'required')"
+              ></mat-error>
+            </mat-form-field>
+
+
+      
+
+
+
+            <div>
+              <button
+                [disabled]="!signInForm.valid"
+                color="primary"
+                mat-raised-button
+                (click)="logIn()"
+              >
+                sign In
+              </button>
+            </div>
+          </form>
+        </mat-tab>
+        <mat-tab [label]="labels.signUp">
+          <form
+            class="register"
+            #signUpForm="ngForm"
+            [formGroup]="registerForm"
+          >
+            <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input
+                type="text"
+                matInput
+                placeholder="First name"
+                formControlName="FirstName"
+              />
+              <mat-error
+                *ngIf="getRegistrationFormValue('FirstName', 'required')"
+              >
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input
+                type="text"
+                matInput
+                placeholder="LastName"
+                formControlName="LastName"
+              />
+              <mat-error
+                *ngIf="getRegistrationFormValue('LastName', 'required')"
+              >
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Age</mat-label>
+              <input
+                type="number"
+                matInput
+                placeholder="age"
+                formControlName="age"
+              />
+              <mat-error *ngIf="getRegistrationFormValue('age', 'required')">
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>email</mat-label>
+              <input
+                type="email"
+                matInput
+                placeholder="enter email"
+                formControlName="email"
+              />
+              <mat-error *ngIf="getRegistrationFormValue('email', 'required')">
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>address</mat-label>
+              <input
+                type="text"
+                matInput
+                placeholder="address"
+                formControlName="address"
+              />
+              <mat-error
+                *ngIf="getRegistrationFormValue('address', 'required')"
+              >
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>phone</mat-label>
+              <input
+                type="tel"
+                matInput
+                placeholder="phone"
+                formControlName="phone"
+              />
+              <mat-error *ngIf="getRegistrationFormValue('phone', 'required')">
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>zipcode</mat-label>
+              <input
+                type="text"
+                matInput
+                placeholder="zipcode"
+                formControlName="zipcode"
+              />
+              <mat-error
+                *ngIf="getRegistrationFormValue('zipcode', 'required')"
+              >
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>gender</mat-label>
+              <mat-select formControlName="gender">
+                <mat-option value="one">male</mat-option>
+                <mat-option value="two">female</mat-option>
+                <mat-option value="two">other</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>password</mat-label>
+              <input
+                type="password"
+                matInput
+                placeholder="password"
+                formControlName="password"
+              />
+              <mat-error
+                *ngIf="getRegistrationFormValue('password', 'required')"
+              >
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label> repeatpassword</mat-label>
+              <input
+                type="password"
+                matInput
+                placeholder="repeatPassword"
+                formControlName="repeatPassword"
+              />
+              <mat-error
+                *ngIf="
+                  getRegistrationFormValue(' plsrepeatPassword', 'required')
+                "
+              >
+              </mat-error>
+              <mat-error
+                *ngIf="getRegistrationFormValue('repeatPassword', 'matchError')"
+              >
+              </mat-error>
+            </mat-form-field>
+
+            <div>
+              <button
+                style="margin-bottom: 20px"
+                [disabled]="!signUpForm.valid"
+                color="primary"
+                mat-raised-button
+                (click)="register()"
+              >
+                sign up
+              </button>
+            </div>
+          </form>
+        </mat-tab>
+      </mat-tab-group>
+    </section>
+  </section>
+  <app-footer></app-footer>
+</main>

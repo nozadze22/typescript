@@ -1,0 +1,23 @@
+
+@media screen and (max-width: 550px) {
+    
+    
+    main {
+        section.main-wraper {
+            section.auth {
+                form {
+                   
+                    &.register,
+                    .wrap  {
+                      display: grid;
+                     grid-template-columns: 1fr;
+                    height: 100%;
+                    } 
+        
+                }
+            }  
+        }
+    }
+
+   
+}

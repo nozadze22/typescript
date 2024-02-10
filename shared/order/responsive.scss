@@ -1,0 +1,78 @@
+@media screen and (max-width: 770px) {
+    
+    .order {
+
+        .pizzas {
+
+            .cards {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .forbook {
+
+            .cards {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 900px) {
+
+
+    .order {
+
+        .banner {
+
+            .sec {
+
+              left: 55%;
+
+              
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 550px) {
+
+    .order {
+
+        .banner {
+            .ordertext {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 375px) {
+
+    .order {
+
+        .banner {
+
+            .sec {
+
+              left: 60%;
+
+              
+            }
+            .ordertext {
+                h1 {
+                    font-size: 18px;
+                }
+            }
+        }
+        
+        }
+    }
